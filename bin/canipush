@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'canipush'
+
+chatter = Canipush::Checker.new
+chatter.can_i_push

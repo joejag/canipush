@@ -1,0 +1,6 @@
+---
+go_url: http://mygoserver:8153/go/cctray.xml
+depends_on:
+- dependent_build
+- another_build
+
