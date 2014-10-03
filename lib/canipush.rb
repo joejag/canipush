@@ -1,8 +1,9 @@
 require 'yaml'
-require 'nokogiri'
-require 'open-uri'
-require 'colorize'
 require 'ostruct'
+require 'open-uri'
+
+require 'nokogiri'
+require 'colorize'
 
 require "canipush/version"
 
@@ -36,7 +37,7 @@ module Canipush
       dependencies.each do |dependency|
         if failing_build?(dependency, proj)
            message = project.xpath('messages/message/@text').to_s
-           broken[name] = message
+           broken[proj.name] = message
         end
       end
     end
